@@ -1,0 +1,195 @@
+@import "var.less";
+
+.section-projects{
+    .section-progress{
+        max-width: 520px;
+        margin: 0 auto; 
+        @media only screen and (min-width: @tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 700px;
+        }
+
+        @media only screen and (min-width: @desktop){
+            max-width: 100%;
+        }
+    }
+
+    .progress-wrap {
+        @media only screen and (min-width: @tablet){
+            flex-basis: calc(40% - 20px);
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        @media only screen and (min-width: @desktop){
+            padding-left: 100px;
+        }
+    }
+
+
+    .progress-text{
+        margin-bottom: 20px;
+
+        @media only screen and (min-width: @tablet){
+            flex-basis: calc(60% - 20px);
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        h3{
+            font-size: 24px;
+            color: @color-light-black;
+            font-weight: normal;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        a {
+            padding: 16px 24px;
+            border: 1px solid @color-purple;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            color: @color-purple;
+            font-weight: 600;
+            font-size: 13px;
+            border-radius: 4px;
+            transition: all.3s ease;
+            
+            &:hover {
+                background-color: @color-purple;
+                color: @color-white;
+            }
+
+        }
+    }
+    .progress-item {
+        margin-bottom: 10px;
+
+        &-title{
+            font-weight: 500;
+            color: @color-purple;
+            margin-bottom: 5px;
+        }
+    }
+    .progress-bar{
+        background-color: rgba(0,0,0,.05);
+        height: 12px;
+        position: relative;
+        border-radius: 2px;
+        margin-top: 5px;
+
+
+        span {
+            background-color: @color-purple;
+            position: absolute;
+            left: 0;
+            height: 12px;
+            font-size: 12px;
+            color: @color-white;
+            text-align: center;
+            line-height: 1;
+            border-radius: 2px;
+
+        }
+    }
+
+
+    .projects-wrapper {
+        @media only screen and (min-width: @tablet) {
+            padding-bottom: 0;
+        }
+
+
+            .section-title,
+            .section-sub-title {
+           text-align: center;
+           display: block;
+        }
+        .projects-filtrer {
+            text-align: center;
+            margin-top: 70px;
+            margin-bottom: 30px;
+            a{
+                display: inline-block;
+                padding: 4px 10px;
+                margin: 5px 5px;
+                border-radius: 3px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #999;
+                border: 1px solid rgba(0,0,0,.05);
+
+                &.active{
+                    background-color: #5579fa;
+                    color: @color-white;
+
+                }
+            }
+        }
+    }
+    .projects-list{
+        padding: 0 12px;
+
+        @media only screen and (min-width: @tablet){
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .pojects-desc {
+            border: 1px solid rgba(0,0,0, 0.1);
+            padding: 20px;
+            margin-top: -10px;
+            
+
+            h4 {
+                font-size: 20px;
+                color: #000;
+                font-weight: 500;
+            }
+             
+            p {
+                color: rgba(0,0,0,.3);
+                margin-bottom: 0;
+                margin-top: 8px;
+            }
+           
+            
+        }
+        article {
+            margin-bottom: 5px;
+         
+            transition: all .3s ease;
+          
+
+
+            @media only screen and (min-width: @tablet){
+                flex-basis: calc((100% / 3) - 10px);
+                margin-left: 5px;
+                margin-right: 5px;
+
+                img {
+                    height: 399.200px;
+                    width: 334.263px;
+    
+                }
+    
+            }
+
+            @media only screen and (min-width: @desktop){
+                flex-basis: calc((100% / 4 ) - 10px);
+           
+
+                img {
+                    height: 498.400px;
+                    width: 334.263px;
+    
+                }
+    
+            }
+            &:hover {
+                background-color: #e0b1fd;
+            }
+           
+        }
+    }
+}

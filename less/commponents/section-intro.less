@@ -1,0 +1,106 @@
+@import "var.less";
+
+
+.section-intro{
+    background: linear-gradient(135deg, #1fc1a9 0%, #2889a6 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1fc1a9", endGradientType=1 );
+            padding-top: 100px;
+            position: relative;
+
+            @media only screen and (min-width: @desktop) {
+                padding-top: 100px;
+            }
+            img{
+            max-width: 100%;
+                
+                @media only screen and (min-width: @tablet) {
+                    max-width: 460px;
+                    position: absolute;
+                    right: 0;
+                }
+                @media only screen and (min-width: @desktop) {
+                    position: relative;
+                    margin-left: auto;
+                }
+            }
+
+           
+
+        
+            .conteiner{
+                min-height: 600px;
+
+                @media only screen and (min-width: @desktop) {
+                display: flex;
+                align-items: center;
+            }
+            }
+
+           
+
+   &-text{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+left: 0;
+right: 0;
+padding: 0 10px;
+
+
+@media only screen and (min-width: @tablet) {
+    max-width: 650px;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+   
+}
+@media only screen and (min-width: @desktop) {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0,0);
+    padding: 0;
+
+}
+
+
+h1, p{
+    color: @color-white;
+}
+h1{
+    font-size: 40px;
+    @media only screen and (min-width: @desktop){
+        font-size: 46px;
+    }
+}
+.link-bg-color{
+    background-color: @color-white;
+    border-radius: 5px;
+    padding: 16px 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: @color-green;
+    font-weight: 600;
+    margin-right: 10px;
+    text-align: center;
+}
+}
+&-liks{
+display: flex;
+align-items: center;
+
+.link-text{
+    text-transform: uppercase;
+    color: @color-white;
+    padding: 16px 24px;
+    text-align: center;
+
+    i{
+        margin-right: 10px;
+    }
+
+    
+}
+}
+
+}

@@ -1,0 +1,108 @@
+@import "var.less";
+
+.section-blog {
+    .section-title,
+    .section-sub-title {
+        text-align: center;
+        display: block;
+      
+    }
+    
+    .blog-wrapper{
+        margin: 50px auto 0 auto;
+
+        @media only screen and (min-width: @tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+    }
+
+    .blog-item {
+        background-color: #f9faff;
+        margin-bottom: 30px;
+        @media only screen and (min-width: @tablet) {
+            flex-basis: calc((100% / 2) - 20px);
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+            @media only screen and (min-width: @desktop) {
+                flex-basis: calc((100% / 3) - 20px);
+            }
+       
+
+
+        &-link {
+            img {
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                max-width: 100%;
+            }
+        }
+
+        &-text {
+            padding: 20px 30px 30px 30px;
+        }
+       
+        
+
+        &-block {
+            margin: 0 30px;
+            background-color: #fff;
+            border-radius: 4px;
+            margin-top: -25px;
+            position: relative;
+            padding: 15px 10px;
+           
+            
+            span {
+                color: @color-light-black;
+                margin-right: 5px;
+                font-weight: 500;
+                text-transform: uppercase;
+
+            }
+
+            i {
+                color: @color-green;
+
+            }
+
+            span, i {
+                font-size: 12px;
+            }
+
+            .blog-item-comments {
+                color: @color-green;
+            }
+
+
+        }
+
+        &-text-link {
+            h3{
+                color: #000;
+                transition: all .3s ease;
+
+                &:hover {
+                    color: @color-green;
+                }
+            }
+          
+        }
+        .blog-item-text {
+            p {
+                color: @color-light-black;
+            }
+
+        }
+      
+        &-read-more {
+            padding: 9px 12px;
+            display: inline-block;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@import "var.less";
+@import "mixin.less";
+.section-our-team{
+    background-color: @color-purple;
+
+
+    .section-sub-title,
+    .section-title {
+        color: @color-white;
+        text-align: center;
+        display: block;
+    }
+
+    .our-team-wrapper {
+        padding-top: 150px;
+        
+            max-width: 520px;
+            margin: 0 auto;
+            .flex-wrapper();
+
+          
+
+
+        .our-team-item {
+            background-color: @color-white;
+            border-radius: 4px;
+            position: relative;
+            padding: 95px 30px 30px 30px;
+            margin-bottom: 125px;
+            text-align: center;
+            transition: all .3s ease;
+
+            .flex-items();
+
+        
+
+            img {
+                width: 186px;
+                border-radius: 50%;
+                height: 186px;
+                position: absolute;
+                top: -95px;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 7px solid @color-purple;
+
+
+            }
+
+            h3 {
+                font-size: 20px;
+                color: @color-title;
+                margin-bottom: 10px;
+            
+            }
+            span {
+                color: @color-green;
+                font-weight: 600;
+                font-size: 14px;
+                display: block;
+                margin-bottom: 10px;
+            }
+            .team-social-icons {
+                a {
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 50%;
+                    background-color: @color-purple;
+                    margin-right: 5px;
+                    display: inline-block;
+
+                    i {
+                        color: @color-white;
+                        line-height: 34px;
+                        
+                    }
+                }
+                
+            }
+
+            p {
+                color: @color-light-black;
+            }
+
+
+            &:hover {
+                background-color: @color-yellow;
+
+                h3, span, p {
+                    color: @color-white;
+                }
+                a {
+                    background-color: rgba(255, 255, 255, 0.3);
+                }
+
+            }
+
+
+        }
+    }
+}

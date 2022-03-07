@@ -1,0 +1,110 @@
+@import "var.less";
+
+
+.section-services{
+    background-color: #f4f6ff;
+
+    .section-title,
+    .section-sub-title {
+      
+        text-align: center;
+        display: block;
+    }
+
+    .section-title {
+        margin-bottom: 70px;
+    }
+    &-items {
+        max-width: 520px;
+        margin: 0 auto;
+        @media only screen and (min-width: @tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 700px;
+        }
+        @media only screen and (min-width: @desktop){
+            max-width: 100%;
+        }
+    }
+    
+    &-item {
+        background-color: @color-white;
+        text-align: center;
+        padding: 30px;
+        border-radius: 2px;
+        margin-bottom: 18px;
+        position: relative;
+        z-index: 0;
+        @media only screen and (min-width: @tablet) {
+            flex-basis: calc((100% / 2) - 20px);
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        @media only screen and (min-width: @desktop){
+            flex-basis: calc((100% / 4) - 20px);
+        }
+
+
+        &:last-of-type {
+            margin-bottom: 0 ;
+
+        }
+
+        h3 {
+            color: @color-title;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        p {
+            color: @color-light-black;
+        }
+        .services-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: @color-green;
+            display: block;
+            margin: 0 auto 20px auto;
+            position: relative;
+            transition: all .3s ease;
+
+            &:after {
+                content: "";
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                top: 3px;
+                left: 0;
+                border-color: #08332d;
+                z-index: -1;
+                
+
+            }
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: @color-white;
+                font-size: 20px;
+            }
+            
+        }
+
+        &:hover {
+            .services-icon{
+                background-color: #5579fa;
+               
+
+                &::after{
+                    top: 5px;
+                    background-color: #0737e2;
+                }
+            }
+        }
+
+    }
+}

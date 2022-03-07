@@ -1,0 +1,63 @@
+@import "var.less";
+
+.section-contact {
+    background-image: url(https://preview.colorlib.com/theme/saita/images/xbg_3.jpg.pagespeed.ic.SGBL9dHC5R.webp) ;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        opacity: .85;
+        background: #5579fa;
+        z-index: -1;
+
+    }
+    .section-contact-text {
+        span {
+            color: @color-white;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: @color-white;
+            font-weight: 600;
+            margin: 20px 0;
+
+        }
+    }
+    &-link {
+        padding: 16px 24px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: @color-green;
+        display: inline-block;
+        font-size: 13px;
+        background-color: @color-white;
+        border-radius: 4px;
+        text-transform: uppercase;
+        @media only screen and (min-width: @tablet) {
+            margin-left: auto;
+            padding: 24px 48px;
+        }
+
+    }
+    .contact-wrapper {
+        @media only screen and (min-width: @tablet) {
+            display: flex;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        
+        }
+    }
+}
